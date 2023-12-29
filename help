@@ -1,0 +1,27 @@
+sql:
+create database pythondata
+use pythondata
+
+CREATE TABLE IF NOT EXISTS `jobs` (
+        	  `present` char(255),
+        	  `job_name` char(255),
+        	  `company` char(255),
+        	  `salary` char(255),
+        	  `area` char(255),
+        	  `job_Requirements` char(255)
+        	) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0
+
+
+	CREATE TABLE IF NOT EXISTS `after_clean` (
+        	  `present` char(255),
+        	  `job_name` char(255),
+        	  `company` char(255),
+        	  `salary` char(255),
+        	  `area` char(255),
+        	  `job_Requirements` char(255)
+        	) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0
+
+            武汉 86  深圳 157  杭州 88   广州 152 上海221  南京 109  苏州 42
+            13.1    17.6      17.21     13.7    19.2    14.5     14.96
+
+        	select avg(salary) from after_clean where area="武汉"
